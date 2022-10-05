@@ -9,7 +9,8 @@ export const theme = deepMerge(grommet, {
       black: '#000000',
       secBrand: '#666666',
       background: '#FFFFFF',
-      secBg: '#F8F8F8'
+      secBg: '#F8F8F8',
+      success: '#7fc425'
     },
     font: {
       family: 'Roboto',

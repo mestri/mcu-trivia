@@ -15,9 +15,27 @@ export const question_1 = (movies: any, series: any, heroes: any) => {
     }
   }, false);
 
+  const answerOptions = [];
+  let heroesIdx = [];
+  let answerIdx = randomNumber(3);
+
+  for (let i = 0; i < 4; i++) {
+    heroesIdx.push(randomNumber(heroes.length - 1));
+    if (i === answerIdx) {
+      answerOptions[i] = moreMovSeries.heroName;
+    } else if (heroes[heroesIdx[i]].heroName !== moreMovSeries.heroName) {
+      answerOptions[i] = heroes[heroesIdx[i]].heroName;
+    } else {
+      answerOptions[i] = 'You';
+    }
+  }
+  console.log('correct: ', moreMovSeries.heroName);
+  console.log('answerOptions: ', answerOptions);
+
   return {
     question: 'Who is the super hero that appears in more Series or Movies?',
-    answer: moreMovSeries.heroName
+    answer: moreMovSeries.heroName,
+    options: answerOptions
   };
 };
 
@@ -26,9 +44,27 @@ export const question_2 = (movies: any, series: any, heroes: any) => {
   console.log('idx: ', idx);
   const selectedHero = heroes[idx];
 
+  const answerOptions = [];
+  let randomAnswer = null;
+  let answerIdx = randomNumber(3);
+
+  for (let i = 0; i < 4; i++) {
+    randomAnswer = randomNumber(20);
+    if (i === answerIdx) {
+      answerOptions[i] = selectedHero.movies.length.toString();
+    } else if (
+      randomAnswer.toString() !== selectedHero.movies.length.toString()
+    ) {
+      answerOptions[i] = randomAnswer.toString();
+    } else {
+      answerOptions[i] = '21';
+    }
+  }
+
   return {
     question: `In how many movies appears ${selectedHero.heroName} ?`,
-    answer: selectedHero.movies.length.toString()
+    answer: selectedHero.movies.length.toString(),
+    options: answerOptions
   };
 };
 
@@ -69,9 +105,26 @@ export const question_3 = (movies: any, series: any, heroes: any) => {
     return max;
   }, false).name;
 
+  const answerOptions = [];
+  let directorIdx = [];
+  let answerIdx = randomNumber(3);
+
+  for (let i = 0; i < 4; i++) {
+    directorIdx.push(randomNumber(directors.length - 1));
+    if (i === answerIdx) {
+      answerOptions[i] = answer;
+    } else if (directors[directorIdx[i]].name !== answer) {
+      answerOptions[i] = directors[directorIdx[i]].name;
+    } else {
+      answerOptions[i] = 'Dicaprio';
+    }
+  }
+
+  console.log('directors options: ', answerOptions);
   return {
     question: `What directors or director has directed more Marvel movies or series?`,
-    answer: answer
+    answer: answer,
+    options: answerOptions
   };
 };
 

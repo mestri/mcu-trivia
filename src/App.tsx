@@ -4,13 +4,13 @@ import { theme } from './theme';
 import axios from 'axios';
 import { AppContext } from './context/AppContext';
 import { generateQuestion } from './questionGenerator';
+import { Trivia } from './Trivia';
 
 function App() {
-  const { heroList } = useContext(AppContext);
+  const { heroList, questionsList, setQuestionsList } = useContext(AppContext);
 
   const [moviesList, setMoviesList] = useState([]);
   const [seriesList, setSeriesList] = useState([]);
-  const [questionsList, setQuestionsList] = useState([]);
 
   useEffect(() => {
     axios
@@ -42,7 +42,7 @@ function App() {
     if (
       moviesList.length > 0 &&
       seriesList.length > 0 &&
-      questionsList.length <= 0
+      questionsList.length <= 1
     ) {
       for (let i = 0; i < 30; i++) {
         questions.push(generateQuestion(moviesList, seriesList, heroList));
@@ -54,8 +54,8 @@ function App() {
 
   return (
     <Grommet theme={theme} full>
-      <Box fill direction="column">
-        <Text>Hello world</Text>
+      <Box fill>
+        <Trivia />
       </Box>
     </Grommet>
   );
