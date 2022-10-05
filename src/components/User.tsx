@@ -20,7 +20,6 @@ export const User = () => {
   let navigate = useNavigate();
 
   const handleSubmitUser = (value: any) => {
-    console.log('value: ', value);
     setUser(value.name);
     navigate('/trivia');
   };

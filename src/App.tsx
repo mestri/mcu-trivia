@@ -19,7 +19,6 @@ function App() {
     axios
       .get('https://mcuapi.herokuapp.com/api/v1/movies')
       .then(function ({ data }) {
-        console.log('movies: ', data.data);
         setMoviesList(data.data);
       })
       .catch(function (error) {
@@ -29,18 +28,14 @@ function App() {
     axios
       .get('https://mcuapi.herokuapp.com/api/v1/tvshows')
       .then(function ({ data }) {
-        console.log('series: ', data.data);
         setSeriesList(data.data);
       })
       .catch(function (error) {
         console.log(error);
       });
-    // setReset(false);
   }, []);
 
   useEffect(() => {
-    console.log('movieList: ', moviesList);
-    console.log('serieList: ', seriesList);
     const questions: any = [];
 
     if (
@@ -51,7 +46,6 @@ function App() {
       for (let i = 0; i < 30; i++) {
         questions.push(generateQuestion(moviesList, seriesList, heroList));
       }
-      console.log('questions: ', questions);
       setQuestionsList(questions);
       setReset(false);
     }

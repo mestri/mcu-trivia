@@ -29,8 +29,6 @@ export const question_1 = (movies: any, series: any, heroes: any) => {
       answerOptions[i] = 'You';
     }
   }
-  console.log('correct: ', moreMovSeries.heroName);
-  console.log('answerOptions: ', answerOptions);
 
   return {
     question: 'Who is the super hero that appears in more Series or Movies?',
@@ -41,7 +39,6 @@ export const question_1 = (movies: any, series: any, heroes: any) => {
 
 export const question_2 = (movies: any, series: any, heroes: any) => {
   const idx = randomNumber(heroes.length - 1);
-  console.log('idx: ', idx);
   const selectedHero = heroes[idx];
 
   const answerOptions = [];
@@ -94,7 +91,6 @@ export const question_3 = (movies: any, series: any, heroes: any) => {
     });
   }, []);
 
-  console.log('directors: ', directors);
   const answer = directors.reduce((max: any, current: any) => {
     if (max === false) {
       return current;
@@ -120,7 +116,6 @@ export const question_3 = (movies: any, series: any, heroes: any) => {
     }
   }
 
-  console.log('directors options: ', answerOptions);
   return {
     question: `What directors or director has directed more Marvel movies or series?`,
     answer: answer,
@@ -290,7 +285,6 @@ export const question_8 = (movies: any, series: any, heroes: any) => {
     });
   }, []);
 
-  console.log('directors: ', directors);
   const answer = directors.reduce((min: any, current: any) => {
     if (min === false) {
       return current;
@@ -316,7 +310,6 @@ export const question_8 = (movies: any, series: any, heroes: any) => {
     }
   }
 
-  console.log('directors options: ', answerOptions);
   return {
     question: `What directors or director has directed fewer Marvel movies or series ?`,
     answer: answer,
@@ -353,8 +346,6 @@ export const question_9 = (movies: any, series: any, heroes: any) => {
       answerOptions[i] = 'You';
     }
   }
-  console.log('correct: ', moreMovSeries.heroName);
-  console.log('answerOptions: ', answerOptions);
 
   return {
     question:
@@ -459,7 +450,6 @@ export const question_12 = (movies: any, series: any, heroes: any) => {
   }, []);
 
   const idx = randomNumber(directors.length - 1);
-  console.log('idx: ', idx);
   const selectedDirector = directors[idx];
 
   const answerOptions = [];

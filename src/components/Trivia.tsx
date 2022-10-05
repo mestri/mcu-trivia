@@ -18,36 +18,28 @@ export const Trivia = () => {
   const [score, setScore] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
 
-  console.log('triv questionsList: ', questionsList[0].question);
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   let navigate = useNavigate();
 
   const handleAnswer = (answer: any) => {
-    console.log('clicked: ', answer);
     if (questionsList[currentQuestion].answer === answer) {
-      console.log('good');
       setScore(score + 1);
       if (currentQuestion !== questionsList.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
       } else {
-        console.log('fin');
         setIsComplete(true);
       }
     } else {
-      console.log('bad');
       if (currentQuestion !== questionsList.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
       } else {
-        console.log('fin');
         setIsComplete(true);
       }
     }
-    console.log('score: ', score);
   };
 
   const handleReset = () => {
-    console.log('reset');
     setReset(true);
     setIsComplete(false);
     setCurrentQuestion(0);
