@@ -1,0 +1,107 @@
+[
+  {
+    "id": "1",
+    "name": "Tony Stark",
+    "heroName": "Iron Man",
+    "profilePhoto": "//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80",
+    "abilities": ["ability1", "ability2"],
+    "movies": [
+      "tt0371746",
+      "tt1228705",
+      "tt1300854",
+      "tt2395427",
+      "tt3498820",
+      "tt2250912",
+      "tt0848228"
+    ],
+    "series": []
+  },
+  {
+    "id": "2",
+    "name": "Natasha Romanoff",
+    "heroName": "Black Widow",
+    "profilePhoto": "//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80",
+    "abilities": ["ability1", "ability2"],
+    "movies": ["tt1843866", "tt2395427", "tt3480822", "tt0848228"],
+    "series": []
+  },
+  {
+    "id": "3",
+    "name": "Bruce Banner",
+    "heroName": "Hulk",
+    "profilePhoto": "//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80",
+    "abilities": ["ability1", "ability2"],
+    "movies": ["tt0800080", "tt0848228", "tt2395427", "tt3501632"],
+    "series": ["tt10857160"]
+  },
+  {
+    "id": "4",
+    "name": "Peter Parker",
+    "heroName": "Spider Man",
+    "profilePhoto": "//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80",
+    "abilities": ["ability1", "ability2"],
+    "movies": ["tt2250912", "tt6320628", "tt10872600"],
+    "series": []
+  },
+  {
+    "id": "5",
+    "name": "Thor",
+    "heroName": "Thor",
+    "profilePhoto": "//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80",
+    "abilities": ["ability1", "ability2"],
+    "movies": [
+      "tt0800369",
+      "tt0848228",
+      "tt1981115",
+      "tt2395427",
+      "tt3501632",
+      "tt10648342"
+    ],
+    "series": []
+  },
+  {
+    "id": "6",
+    "name": "Steve Rogers",
+    "heroName": "Captain America",
+    "profilePhoto": "//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80",
+    "abilities": ["ability1", "ability2"],
+    "movies": [
+      "tt0458339",
+      "tt0848228",
+      "tt1843866",
+      "tt2395427",
+      "tt3498820",
+      "tt2250912",
+      "tt5095030",
+      "tt14513804"
+    ],
+    "series": []
+  },
+  {
+    "id": "7",
+    "name": "Scott Lang",
+    "heroName": "Ant Man",
+    "profilePhoto": "//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80",
+    "abilities": ["ability1", "ability2"],
+    "movies": ["tt0478970", "tt5095030", "tt10954600"],
+    "series": []
+  },
+  {
+    "id": "8",
+    "name": "Dr. Stephen Strange",
+    "heroName": "Doctor Strange",
+    "profilePhoto": "//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80",
+    "abilities": ["ability1", "ability2"],
+    "movies": ["tt1211837", "tt10872600"],
+    "series": []
+  },
+  {
+    "id": "9",
+    "name": "Sam Wilson",
+    "heroName": "The Falcon",
+    "profilePhoto": "//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80",
+    "abilities": ["ability1", "ability2"],
+    "movies": ["tt1843866"],
+    "series": ["tt9208876"]
+  }
+]

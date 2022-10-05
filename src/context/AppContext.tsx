@@ -1,4 +1,5 @@
 import { createContext, useState, Context } from 'react';
+import heroes from '../heroes.json';
 
 interface HeroType {
   id: string;
@@ -15,18 +16,7 @@ interface AppContextType {
   setHeroList: any;
 }
 
-const initialHeroList = [
-  {
-    id: '1',
-    name: 'Bruce Wine',
-    heroName: 'Batman',
-    profilePhoto:
-      '//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80',
-    abilities: ['ability1', 'ability2'],
-    movies: ['1', '2'],
-    series: ['5', '3']
-  }
-];
+const initialHeroList: Array<HeroType> = heroes;
 
 export const AppContext: Context<AppContextType> = createContext({
   heroList: initialHeroList,
