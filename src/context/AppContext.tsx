@@ -22,6 +22,8 @@ interface AppContextType {
   setHeroList: any;
   questionsList: Array<QuestionType>;
   setQuestionsList: any;
+  reset: any;
+  setReset: any;
 }
 
 const initialHeroList: Array<HeroType> = heroes;
@@ -37,12 +39,15 @@ export const AppContext: Context<AppContextType> = createContext({
   heroList: initialHeroList,
   setHeroList: (heroList: Array<HeroType>) => {},
   questionsList: initialQuestionList,
-  setQuestionsList: (questionsList: Array<QuestionType>) => {}
+  setQuestionsList: (questionsList: Array<QuestionType>) => {},
+  reset: false,
+  setReset: (reset: boolean) => {}
 });
 
 export const AppProvider = ({ children }: any) => {
   const [heroList, setHeroList] = useState(initialHeroList);
   const [questionsList, setQuestionsList] = useState(initialQuestionList);
+  const [reset, setReset] = useState(false);
 
   return (
     <AppContext.Provider
@@ -50,7 +55,9 @@ export const AppProvider = ({ children }: any) => {
         heroList,
         setHeroList,
         questionsList,
-        setQuestionsList
+        setQuestionsList,
+        reset,
+        setReset
       }}
     >
       {children}

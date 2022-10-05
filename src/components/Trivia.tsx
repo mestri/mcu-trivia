@@ -1,6 +1,6 @@
 import { Box, Button, Heading, Text } from 'grommet';
 import React, { useContext, useState } from 'react';
-import { AppContext } from './context/AppContext';
+import { AppContext } from '../context/AppContext';
 import {
   AnswerBox,
   AnswerButton,
@@ -13,7 +13,7 @@ import {
 } from './Trivia.styles';
 
 export const Trivia = () => {
-  const { questionsList } = useContext(AppContext);
+  const { questionsList, setReset } = useContext(AppContext);
   const [score, setScore] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
 
@@ -45,6 +45,7 @@ export const Trivia = () => {
 
   const handleReset = () => {
     console.log('reset');
+    setReset(true);
   };
 
   return (

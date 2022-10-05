@@ -4,10 +4,11 @@ import { theme } from './theme';
 import axios from 'axios';
 import { AppContext } from './context/AppContext';
 import { generateQuestion } from './questionGenerator';
-import { Trivia } from './Trivia';
+import { Trivia } from './components/Trivia';
 
 function App() {
-  const { heroList, questionsList, setQuestionsList } = useContext(AppContext);
+  const { heroList, questionsList, setQuestionsList, reset, setReset } =
+    useContext(AppContext);
 
   const [moviesList, setMoviesList] = useState([]);
   const [seriesList, setSeriesList] = useState([]);
@@ -32,7 +33,8 @@ function App() {
       .catch(function (error) {
         console.log(error);
       });
-  }, []);
+    setReset(false);
+  }, [reset]);
 
   useEffect(() => {
     console.log('movieList: ', moviesList);
