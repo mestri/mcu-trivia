@@ -14,7 +14,7 @@ import {
 } from './Trivia.styles';
 
 export const Trivia = () => {
-  const { questionsList, setReset } = useContext(AppContext);
+  const { questionsList, setReset, user } = useContext(AppContext);
   const [score, setScore] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
 
@@ -49,6 +49,8 @@ export const Trivia = () => {
   const handleReset = () => {
     console.log('reset');
     setReset(true);
+    setIsComplete(false);
+    setCurrentQuestion(0);
     navigate('/');
   };
 
@@ -73,6 +75,9 @@ export const Trivia = () => {
             elevation="small"
             gap="small"
           >
+            <Heading size="medium" alignSelf="center">
+              {user}
+            </Heading>
             <Heading size="small" alignSelf="center">
               Congratulations!!!
             </Heading>

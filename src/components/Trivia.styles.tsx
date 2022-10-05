@@ -28,8 +28,8 @@ export const ScoreContainer = styled(Box)`
   background: #ffffff;
   padding-left: 40px;
   padding-right: 40px;
-  padding-top: 30%;
-  padding-bottom: 30%;
+  padding-top: 7%;
+  padding-bottom: 7%;
 `;
 
 export const AnswerBox = styled(Box)`

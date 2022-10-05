@@ -6,6 +6,7 @@ import { AppContext } from './context/AppContext';
 import { generateQuestion } from './questionGenerator';
 import { Trivia } from './components/Trivia';
 import { Route, Routes } from 'react-router-dom';
+import { User } from './components/User';
 
 function App() {
   const { heroList, questionsList, setQuestionsList, reset, setReset } =
@@ -34,8 +35,8 @@ function App() {
       .catch(function (error) {
         console.log(error);
       });
-    setReset(false);
-  }, [reset]);
+    // setReset(false);
+  }, []);
 
   useEffect(() => {
     console.log('movieList: ', moviesList);
@@ -45,22 +46,23 @@ function App() {
     if (
       moviesList.length > 0 &&
       seriesList.length > 0 &&
-      questionsList.length <= 1
+      (questionsList.length <= 1 || reset === true)
     ) {
       for (let i = 0; i < 30; i++) {
         questions.push(generateQuestion(moviesList, seriesList, heroList));
       }
       console.log('questions: ', questions);
       setQuestionsList(questions);
+      setReset(false);
     }
-  }, [moviesList, seriesList]);
+  }, [moviesList, seriesList, reset]);
 
   return (
     <Grommet theme={theme} full>
       <Box fill>
         <Routes>
+          <Route path="/" element={<User />} />
           <Route path="/trivia" element={<Trivia />} />
-          <Route path="/" element={<App />} />
         </Routes>
       </Box>
     </Grommet>
