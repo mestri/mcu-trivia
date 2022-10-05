@@ -5,6 +5,7 @@ import axios from 'axios';
 import { AppContext } from './context/AppContext';
 import { generateQuestion } from './questionGenerator';
 import { Trivia } from './components/Trivia';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   const { heroList, questionsList, setQuestionsList, reset, setReset } =
@@ -57,7 +58,10 @@ function App() {
   return (
     <Grommet theme={theme} full>
       <Box fill>
-        <Trivia />
+        <Routes>
+          <Route path="/trivia" element={<Trivia />} />
+          <Route path="/" element={<App />} />
+        </Routes>
       </Box>
     </Grommet>
   );
