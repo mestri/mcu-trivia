@@ -62,4 +62,6 @@ To restart the game, press the Reset button.
 
 ## Apps deployed
 
-[mcu-trivia](https://)
+The app deployed is in the following URL:
+
+[mcu-trivia](https://633e06c0d181891bb26ca6f0--mcu-trivia.netlify.app/)

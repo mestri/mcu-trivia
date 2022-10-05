@@ -20,6 +20,6 @@ export const InnerContainer = styled(Box)`
   background: #ffffff;
   padding-left: 40px;
   padding-right: 40px;
-  padding-top: 35%;
-  padding-bottom: 35%;
+  padding-top: 15%;
+  padding-bottom: 15%;
 `;
