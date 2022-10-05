@@ -31,6 +31,5 @@ const questions: any = [
 
 export const generateQuestion = (movies: any, series: any, heroes: any) => {
   const randomIdex = randomNumber(questions.length - 1);
-  console.log('randomIdex: ', randomIdex);
   return questions[randomIdex](movies, series, heroes);
 };

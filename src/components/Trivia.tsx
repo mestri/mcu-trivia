@@ -67,7 +67,7 @@ export const Trivia = () => {
             elevation="small"
             gap="small"
           >
-            <Heading size="medium" alignSelf="center">
+            <Heading size="small" alignSelf="center">
               {user}
             </Heading>
             <Heading size="small" alignSelf="center">
